@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <title>WebMCP POC – Asset Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Asset Library <span class="tag">WebMCP POC</span></h1>
+    <div id="status" class="status" role="status">Checking WebMCP support…</div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Assets</h2>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Search name or tag" aria-label="Search assets">
+        <select id="type" aria-label="Filter by type">
+          <option value="">All types</option>
+          <option>image</option><option>video</option><option>document</option>
+        </select>
+      </div>
+      <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Type</th><th>Tags</th><th>Actions</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+
+    <aside>
+      <section class="panel">
+        <h2>Collection: <span id="colName">Campaign Q4</span></h2>
+        <ul id="collection"></ul>
+      </section>
+      <section class="panel">
+        <h2>Tool call log</h2>
+        <p class="hint">Every WebMCP tool call appears here (agent activity is visible to the user).</p>
+        <ol id="log"></ol>
+      </section>
+    </aside>
+  </main>
+
+  <dialog id="confirm">
+    <form method="dialog">
+      <p id="confirmMsg"></p>
+      <menu>
+        <button value="cancel">Cancel</button>
+        <button value="ok" class="danger">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

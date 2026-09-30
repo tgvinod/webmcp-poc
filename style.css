@@ -1,0 +1,28 @@
+:root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #f4f5f7; }
+body { margin: 0; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; background: #fff; border-bottom: 1px solid #ddd; }
+h1 { font-size: 20px; margin: 0; }
+h2 { font-size: 15px; margin: 0 0 10px; }
+.tag { font-size: 12px; background: #eb1000; color: #fff; padding: 2px 8px; border-radius: 10px; vertical-align: middle; }
+.status { font-size: 13px; padding: 4px 10px; border-radius: 6px; background: #eee; }
+.status.ok { background: #d7f5dd; }
+.status.no { background: #ffe0e0; }
+main { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; padding: 16px 24px; }
+.panel { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+.controls { display: flex; gap: 8px; margin-bottom: 10px; }
+input, select, button { font: inherit; padding: 6px 10px; border: 1px solid #bbb; border-radius: 6px; background: #fff; }
+input { flex: 1; }
+button { cursor: pointer; }
+button.danger { background: #c9252d; color: #fff; border-color: #c9252d; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eee; }
+td.actions button { margin-right: 4px; font-size: 12px; padding: 3px 8px; }
+ul, ol { margin: 0; padding-left: 20px; font-size: 13px; }
+#log li { margin-bottom: 6px; word-break: break-word; }
+#log .read { color: #1a6b2e; }
+#log .write { color: #9a5b00; }
+#log .destructive { color: #c9252d; }
+.hint { font-size: 12px; color: #666; margin: 0 0 8px; }
+dialog { border: 1px solid #999; border-radius: 8px; padding: 18px; }
+dialog menu { display: flex; gap: 8px; justify-content: flex-end; padding: 0; margin: 12px 0 0; }
+.flash { background: #fff6c2; transition: background 1.5s; }
